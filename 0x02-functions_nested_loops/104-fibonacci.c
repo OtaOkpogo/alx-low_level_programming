@@ -6,6 +6,7 @@
  */
 
 int main(void)
+
 {
 unsigned int a = 1, b = 2, next;
 

@@ -1,39 +1,15 @@
+#include "function_pointers.h"
 #include <stdio.h>
-#include "0-print_name.h"
-/**
- * print_to_stdout - Prints a name to the standard output
- * @name: The name to be printed
- */
-void print_to_stdout(char *name)
-{
-if (name != NULL)
-{
-printf("Name: %s\n", name);
-}
-}
 
 /**
- * print_name - Calls a function to print a name
- * @name: The name to be printed
- * @f: A function pointer to the printing function
- */
-void print_name(char *name, void (*f)(char *))
+ * print_name - this function prints a name
+ * @name: string to add
+ * @f: pointer to function
+ * Return: nothing
+ **/
+void print_name(char *name, void (*f) (char *))
 {
-if (name != NULL && f != NULL)
-{
-f(name);
-}
-}
-
-/**
- * main - Entry point of the program
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-char myName[] = "John";
-print_name(myName, print_to_stdout);
-
-return (0);
+	if (name == NULL || f == NULL)
+		return;
+	f(name);
 }

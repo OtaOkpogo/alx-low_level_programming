@@ -1,11 +1,14 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
-* print_numbers - prints numbers followed by a new line
-* @n: number of parameter
-* @separator: separator between two numbers
-* Return: Always 0
-*/
+ * print_strings - Prints strings with a separator
+ * @separator: The string to be printed between the strings
+ * @n: The number of strings to be printed
+ * @...: Variable number of string arguments
+ *
+ * Description: This function takes a variable number of a string
+ * Return: 0
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 unsigned int x;
